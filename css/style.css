@@ -1,0 +1,493 @@
+/* Définition des polices */
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter-Regular.woff2') format('woff2'),
+         url('./fonts/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter-Medium.woff2') format('woff2'),
+         url('./fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter-Bold.woff2') format('woff2'),
+         url('./fonts/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Style de base */
+body {
+    font-family: 'Inter', 'Helvetica', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 15px;
+    color: #ccc;
+    width: 100%;  /* Assure que la navbar occupe toute la largeur */
+    
+}
+
+/* Image du logo */
+.logo-img {
+    height: 119px;  /* Augmentez la taille de l'image */
+    width: auto;   /* Laissez la largeur s'ajuster automatiquement */
+}
+
+/* Style du header avec padding top et bottom */
+header {
+    padding-top: 20px;  /* Ajoute du padding en haut */
+    padding-bottom: 20px;  /* Ajoute du padding en bas */
+    /* position: fixed; */
+}
+
+/* Style du bouton "Se connecter" */
+.menu .btn-connect {
+    --bs-btn-padding-y: 0.7rem;
+    --bs-btn-padding-x: 1.2rem;
+    --bs-btn-font-size: 1.25rem;
+    --bs-btn-border-radius: 1.5rem;
+    
+    color: #fff;
+    font-size: var(--bs-btn-font-size); /* Utilisation de la variable pour la taille de police */
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background-color: #2b91ff;
+    
+    border: none;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x); /* Utilisation des variables pour le padding */
+    border-radius: var(--bs-btn-border-radius); /* Utilisation de la variable pour le border-radius */
+}
+
+/* Style au survol (hover) */
+.menu .btn-connect:hover {
+    background-color: #fff;
+    color: #2b91ff;
+    border: 2px solid #2b91ff;
+    font-size: var(--bs-btn-font-size);
+}
+
+/* Style du texte "Se connecter" */
+.menu .btn-connect .connect {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Ajouter un trait sous le texte "Se connecter" */
+.menu .btn-connect .connect::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Effet de survol (hover) sur le texte */
+.menu .btn-connect:hover .connect {
+    color: #2b91ff;
+}
+
+/* Lors du survol du bouton, le trait devient visible sous le texte */
+.menu .btn-connect:hover .connect::after {
+    transform: scaleX(1);
+    background-color: #2b91ff;
+}
+
+
+.sub_header{
+    background-color: #f5F5F5;
+}
+
+/* Style du conteneur */
+.sub_header {
+    padding-top: calc(8rem + 45px); /* Espace supérieur pour équilibrer */
+    padding-bottom: 10rem;           /* Espace inférieur pour centrer le contenu */
+    text-align: center;
+    color: #000;
+}
+
+/* Style du titre principal */
+.text_slider h1 {
+    font-size: 3rem;           /* Taille par défaut pour petits écrans, légèrement plus grande */
+    font-weight: 500;          /* Rend le texte plus gras pour les petits écrans */
+    margin: 0;
+    color: #000;
+}
+
+/* Styles pour écrans moyens */
+@media (min-width: 768px) {
+    .text_slider h1 {
+        font-size: 3.2rem;     /* Taille de police moyenne */
+        font-weight: 500;      /* Réduit légèrement l'épaisseur du texte */
+    }
+}
+
+/* Styles pour grands écrans */
+@media (min-width: 992px) {
+    .text_slider h1 {
+        font-size: 4rem;       /* Taille pour les écrans larges */
+        font-weight: 400;      /* Poids de texte normal pour grands écrans */
+    }
+}
+
+/* Styles pour très grands écrans */
+@media (min-width: 1200px) {
+    .text_slider h1 {
+        font-size: 5rem;       /* Taille encore plus grande pour les très grands écrans */
+        font-weight: 500;      /* Conserve le poids de texte léger */
+    }
+}
+
+
+/* Style du texte "Yimba" */
+.site_title {
+    color: #2b91ff;  /* Couleur bleue pour le titre */
+}
+
+.sub_text {
+    font-size: 1rem;            /* Taille de police par défaut pour petits écrans (16px) */
+    color: #6a6a6a;             /* Couleur de texte */
+    line-height: inherit;       /* Hauteur de ligne héritée du parent */
+    margin: 1.5rem 0;           /* Marge verticale de 1.5rem */
+    margin-bottom: 0 !important; /* Supprime la marge inférieure, avec priorité */
+}
+
+/* Taille pour écrans moyens (tablettes et petits ordinateurs) */
+@media (min-width: 768px) {
+    .sub_text {
+        font-size: 0.9rem;     /* Augmente la taille à 1.25rem (~20px) */
+    }
+}
+
+/* Taille pour écrans larges (ordinateurs) */
+@media (min-width: 992px) {
+    .sub_text {
+        font-size: 1.1rem;      /* Taille à 1.5rem (~24px) */
+    }
+}
+
+/* Taille pour très grands écrans */
+@media (min-width: 1200px) {
+    .sub_text {
+        font-size: 1.5rem;     /* Taille à 1.75rem (~28px) */
+    }
+}
+
+/* Style du bouton "En savoir Plus" */
+.menu-slide .btn-connect-slide {
+    --bs-btn-padding-y: 0.7rem;
+    --bs-btn-padding-x: 1.2rem;
+    --bs-btn-font-size: 1.25rem;
+    --bs-btn-border-radius: 2.5rem;
+    margin-top: 1rem !important;
+    color: #2b91ff;
+    font-size: var(--bs-btn-font-size); /* Utilisation de la variable pour la taille de police */
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: #fff;
+    
+    border: 1px solid #2b91ff;
+    letter-spacing: .1rem;
+    padding: 1.5rem 3rem;
+    border-radius: var(--bs-btn-border-radius); /* Utilisation de la variable pour le border-radius */
+}
+
+/* Style au survol (hover) */
+.menu-slide .btn-connect-slide:hover {
+    background-color:  #2b91ff;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: var(--bs-btn-font-size);
+}
+
+/* Style du texte "En savoir plus" */
+.menu-slide .btn-connect-slide .connect-slide {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Ajouter un trait sous le texte "En savoir plus" */
+.menu-slide .btn-connect-slide .connect-slide::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #2b91ff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Effet de survol (hover) sur le texte */
+.menu-slide .btn-connect-slide-slide:hover .connect-slide {
+    color: #fff;
+}
+
+/* Lors du survol du bouton, le trait devient visible sous le texte */
+.menu-slide .btn-connect-slide:hover .connect-slide::after {
+    transform: scaleX(1);
+    background-color: #fff;
+}
+
+
+/* Conteneur du SVG */
+.svg-icon-container {
+    text-align: center;  /* Centrer le SVG horizontalement */
+    margin-top: 20px;     /* Espacement au-dessus du SVG */
+    overflow: hidden;     /* Cache tout ce qui dépasse */
+    position: relative;   /* Position relative pour gérer le clip */
+    animation: moveDownUp 1s ease-in-out infinite; 
+}
+
+/* Animation de déplacement dynamique du haut vers le bas */
+@keyframes moveDownUp {
+    0% {
+        transform: translateY(-15px);  /* Commence légèrement au-dessus */
+    }
+    50% {
+        transform: translateY(15px);   /* Déplace vers le bas */
+    }
+    100% {
+        transform: translateY(-15px);  /* Retour à la position initiale */
+    }
+}
+
+/* Animation de clip content du haut vers le bas */
+.MuiSvgIcon-root {
+    width: 33px;         /* Ajustez la largeur du SVG */
+    height: 33px;        /* Ajustez la hauteur du SVG */
+    fill: #2b91ff;       /* Appliquez la couleur à l'icône */
+    cursor: pointer;     /* Curseur de type pointer pour l'icône */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation lors du survol */
+    position: relative;   /* Positionnement relatif pour appliquer l'animation de clip */
+    background-color: transparent; /* Fond transparent initialement */
+    padding: 5px;         /* Un peu de padding autour de l'icône */
+    border-radius: 50%;   /* Rendre le fond circulaire (optionnel, selon le design souhaité) */
+    transition: all 0.3s ease;  /* Transition douce pour les changements */
+}
+
+/* Animation de survol avec changement de fond */
+.MuiSvgIcon-root:hover {
+    transform: scale(1.2); /* Agrandir l'icône au survol */
+    background-color: #e0e0e0; /* Fond gris clair au survol */
+}
+
+/* Optionnel : Animation de clip content - l'effet qui vient du haut vers le bas */
+.MuiSvgIcon-root:before {
+    content: ""; /* Contenu vide pour l'effet */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2b91ff; /* Appliquez la couleur du fond */
+    transform: scaleY(0);  /* Commence l'animation avec une échelle verticale de 0 */
+    transform-origin: top; /* L'animation commence du haut */
+    transition: transform 0.4s ease;  /* Animation douce de haut en bas */
+    border-radius: 50%;   /* Optionnel: pour garder un fond circulaire */
+}
+
+/* Lorsque l'icône est survolée, l'animation "clip content" s'active */
+.MuiSvgIcon-root:hover:before {
+    transform: scaleY(1); /* L'élément grandit du haut vers le bas */
+}
+
+
+
+
+.analysis-section {
+    padding: 20px;
+    background-color: #b0d4e3;
+    border-radius: 8px;
+}
+
+.image-container img {
+    max-width: 100%; /* Utilise img-fluid pour redimensionner automatiquement */
+    height: auto;
+}
+
+.text-container {
+    color: #495057;
+    margin: 20px 0; /* Marge verticale entre les sections */
+}
+
+.text-container .title {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+    color: #000;
+   font-weight: 100; 
+}
+
+.text-container p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+
+
+
+.content-colecte {
+    background-color: #E4ECF7;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.text-content {
+    color: #333;
+}
+
+.text-content h1 {
+    font-size: 51px;
+    font-weight: 30;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #495057;
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+}
+
+.image-content .k-img-fluid {
+    border-radius: 50% !important;
+    height: 350px;
+    width: 350px;
+}
+
+
+.box-services {
+    text-align: center;
+    padding: 60px;
+    background-color: #F5F8F9;
+}
+.box-services .row:first-of-type {
+    margin-bottom: 40px; /* Ajustez la valeur pour plus ou moins d'espacement */
+}
+
+
+.box-services h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.line {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(135deg, #E2E9F9, #000000);
+    margin: 10px auto;
+}
+
+.features {
+    margin-top: 48px 0 0;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+}
+
+.icon {
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    color: #000;
+    margin: O O 8px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #6C757D;
+}
+
+/* Effet de zoom au survol */
+.feature:hover {
+    transform: scale(1.05); /* Augmente légèrement la taille de l'élément */
+    border: none;
+}
+
+
+.footer {
+    background-color: #d8e5f8;
+    color: #333;
+    font-size: 14px;
+}
+
+
+
+.social-icon {
+    margin: 0 4px;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon svg {
+    color: #212529;
+    transition: color 0.3s;
+}
+
+.social-icon svg:hover {
+    color: #4C4C4C;
+}
+
+.footer p,
+.footer a {
+    margin: 4px 0;
+    color: #4C4C4C;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    text-decoration: none;
+}
+
+footer .container .justify-content-md-start .img{
+    height: 119px;  /* Augmentez la taille de l'image */
+    width: 200px; 
+}
